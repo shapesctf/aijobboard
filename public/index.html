@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborative Sudoku</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section id="authSection" class="card">
+      <h1>Collaborative Sudoku</h1>
+      <p>Login with x.com to join.</p>
+      <button id="xLogin">Login with X</button>
+      <div id="profileForm" class="hidden">
+        <input id="handle" placeholder="@handle" />
+        <input id="avatar" placeholder="Avatar URL (optional)" />
+        <button id="saveProfile">Save Profile</button>
+      </div>
+      <div id="me"></div>
+    </section>
+
+    <section id="createSection" class="card hidden">
+      <h2>Create game</h2>
+      <label>Max players (2-8)
+        <input id="maxPlayers" type="number" min="2" max="8" value="4" />
+      </label>
+      <button id="createGame">Create</button>
+      <p id="shareLink"></p>
+    </section>
+
+    <section id="gameSection" class="hidden">
+      <div class="topbar card">
+        <h2 id="gameTitle"></h2>
+        <div id="players"></div>
+      </div>
+      <div id="board" class="board"></div>
+      <div id="picker" class="picker hidden"></div>
+      <div id="summary" class="card hidden"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
